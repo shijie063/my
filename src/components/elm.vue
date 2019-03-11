@@ -41,7 +41,7 @@
               <div class="iconfont">&#xe629;<span>我的</span> </div>
          </div>
          <div class="tuijian">
-           <p>一 推荐商家 一</p>
+           <p @click="hendler">一 推荐商家 一</p>
          </div>
         <elist></elist>
         <!-- <div class="homeswiper" style='height:3rem'>
@@ -63,6 +63,7 @@ export default {
  components:{elist},
   data () {
     return {
+      a:'1',
      img:'../../static/img/swip.png',
      items:[
        {
@@ -108,6 +109,17 @@ export default {
      ],
      local:'北京西站',
      imgs:['../../static/img/swip.png','../../static/img/img2.png']
+    }
+  },
+  mounted(){
+    this.a = '3'
+    console.log(this.a)
+  },
+  methods:{
+    hendler(){
+      console.log(this.a)
+      this.a = '2'
+      console.log(this.a)
     }
   }
 }
